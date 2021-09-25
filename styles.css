@@ -32,10 +32,6 @@ body {
     justify-content: center;
 }
 
-.scroll { 
-    
-}
-
 .navbar{
     margin-top: 10px;
     padding-top: 10px;
@@ -47,6 +43,22 @@ body {
     width: 95%;
     font-family: var(--title);
 }
+
+.background {
+    background-color: #351947;
+    width: 96%;
+    border-radius: 20px;
+    transition: all 0.5s 0s ease;
+}
+
+.background div {
+    margin-left: 1%;
+}
+
+.background ul {
+    margin-right: 1%;
+}
+
 
 .logo {
     font-size: 45px;
@@ -116,6 +128,11 @@ section {
     scroll-snap-align: start;
 }
 
+.about svg {
+    position: absolute;
+    width: 100%;
+}
+
 .title-content {
     padding: 100px 0;
     display: flex;
@@ -130,7 +147,7 @@ section {
 
 .secund {
     margin-top: 20px;
-    color: #552277;
+    color: #351947;
     font-family: var(--title);
     font-size: 1.2em;
 }
