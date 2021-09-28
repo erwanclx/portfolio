@@ -19,6 +19,7 @@ body {
     color: white;
 }
 
+
 .home {
     background: url(banner.jpg.png) no-repeat center;
     height: 100vh;
@@ -44,7 +45,7 @@ body {
     font-family: var(--title);
 }
 
-.background {
+/* .background {
     background-color: #351947;
     width: 96%;
     border-radius: 20px;
@@ -57,17 +58,37 @@ body {
 
 .background ul {
     margin-right: 1%;
+} */
+
+.backgroundlogo {
+    background-color: #261431;
+    border-radius: 20px;
+    transition: all 0.3s 0s ease;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-TOP: 5px;
+    padding-bottom: 5px;
 }
 
+.backgroundlogo:hover {
+    background-color: #552277;
+}
+
+.transition {
+    transition: all 0.2s 0s ease;
+}
 
 .logo {
     font-size: 45px;
 }
 
-.navbar .logo a span{
+.colorlogo{
     color: #552277;
 }
 
+.colorlogoscroll{
+    color: white;
+}
 
 .menu {
     list-style: none;
@@ -79,12 +100,27 @@ body {
     margin-left: 17px;
 }
 
+
+.backgroundli {
+    background-color: #261431;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-TOP: 5px;
+    padding-bottom: 5px;
+    transform: scale(1.1);
+}
+
+.backgroundli:hover {
+    background-color: #552277;
+}
+
 .menu-btn {
     transition: ease-in-out 0.3s;
 }
 
 .menu-btn:hover {
-    color: #552277;
     font-size: 18.5px;
     padding-bottom: 2px;
     border-bottom: solid 1.5px #552277;
