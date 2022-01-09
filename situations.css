@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxygen&family=Ubuntu&display=swap');
+
+:root {
+    --title: 'Ubuntu', sans-serif;
+    --content: 'Oxygen', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+}
+
+.situations-home {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 95%;
+    height: 90%;
+    background: linear-gradient(135deg, rgba(103,7,215,1) 0%, rgba(195,7,215,1) 100%);
+    border-radius: 30px;
+
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.21fr 0.79fr;
+    grid-template-areas: "title1 title2"
+                         "bloc1 bloc2"
+
+}
+
+.title-flex1 {
+    grid-area: title1;
+    margin-left: 10px;
+}
+
+.title-flex2 {
+    grid-area: title2;
+    margin-left: 10px;
+}
+
+.secundtitle-flex1 {
+    color: transparent;
+    -webkit-text-stroke: 1.5px #87839c;
+    text-align: end;
+    margin-right: 7%;
+}
+
+.secundtitle-flex2 {
+    text-align: end;
+    margin-right: 7%;
+}
+
+.firsttitle-flex2 {   
+    color: transparent;
+    -webkit-text-stroke: 1.5px #87839c;
+}
+
+h2 {
+    font-family: sans-serif;
+    font-size: 5em;
+    color: white;
+    margin-top: 3%;
+    line-height: 0.7;
+}
+
+.bloc-1 {
+    grid-area: bloc1;
+    margin: auto;
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 30px;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: auto;
+    width: 90%;
+    height: 95%;
+
+    /* CHOIX MULTIPLES */
+
+    display: flex;
+    flex-direction: column;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    
+}
+
+.bloc-2 {
+    margin: auto;
+    grid-area: 2/2;
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 30px;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: auto;
+    width: 90%;
+    height: 95%;
+
+    /* CHOIX MULTIPLES */
+
+    display: flex;
+    flex-direction: column;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+}
+
+
+.bloc {
+    background-color: white;
+    border-radius: 30px;
+    width: 98%;
+    height: 20%;
+    margin: auto;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+
+    transition: height 300ms ease;
+}
+
+.bloc:hover {
+    height: 100%;
+    padding-top: 20px;
+    flex-direction: initial;
+    transition: all 300ms ease;
+}
+
+.bloc:hover > h3{
+    width: 100%;
+    justify-content: space-between;
+}
+
+.bloc > p {
+    display: none;
+}
+
+.bloc > h3 {
+    font-family: var(--title);
+    font-size: 1.7em;
+    text-transform: uppercase;
+    line-height: 1;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+
+    background: -webkit-linear-gradient(145deg, rgba(103,7,215,1) 0%, rgba(195,7,215,1) 100%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.exit {
+    position: absolute;
+    left: 95%;
+    font-size: 5em;
+    font-family: var(--title);
+    font-weight: bold;
+    color: white;
+    transition: color 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.exit:hover {
+    color: transparent;
+    -webkit-text-stroke: 1.5px #87839c;
+}

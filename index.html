@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Portfolio d'Erwan C.</title>
+        <title>Accueil - Portfolio d'Erwan C.</title>
         <meta name="description" content="">
         <link rel="stylesheet" href="styles.css">
         <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
@@ -14,11 +14,11 @@
             <nav class="navbar" id="navbar">
                     <div class="logo"><a href="#" class="alogo">Mon Portf<span class="colorlogo">o</span><span class="colorlogo">l</span><span class="colorlogo">i</span><span class="colorlogo">o.</span></a></div>
                     <ul class="menu">
-                        <li class="linav"><a href="#" class="menu-btn">Accueil</a></li>
-                        <li class="linav"><a href="#about" class="menu-btn">A propos</a></li>
-                        <li class="linav"><a href="#jobs" class="menu-btn">Mes expériences</a></li>
-                        <li class="linav"><a href="#skills" class="menu-btn">Mes compétences</a></li>
-                        <li class="linav"><a href="#contact" class="menu-btn">Contact</a></li>
+                        <li class="linav"><a href="#about" class="menu-btn">A propos de moi</a></li>
+                        <li class="linav"><a href="entreprise.html" class="menu-btn">L'entreprise</a></li>
+                        <li class="linav"><a href="situations.html" class="menu-btn">Situations professionnelles</a></li>
+                        <li class="linav"><a href="#" class="menu-btn">Veille technologique</a></li>
+                        <li class="linav"><a href="#" class="menu-btn">Bilan des deux années</a></li>
                     </ul>
             </nav>
         </div>
@@ -26,8 +26,12 @@
             <div class="welcome">
                 <br id="welcome-msg">Bonjour, je m'appelle</br><span class="name-span">Erwan Cloux</span><br>Je suis un <span id="typed"></span></p>
             </div>
+
+            <a href="#about"><img src="arrow.png" class="arrow"></a> <!-- CTA pour scroll -->
+
         </div>
       
+        
 
        <section class="about scroll" id="about">
            <div class="title-content">
@@ -42,11 +46,48 @@
                     <p class="pres-txt"><h3 class="who" style="color: #000000;">Qui suis-je?</h3>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi ut voluptatum eveniet doloremque autem excepturi eaque, sit laboriosam voluptatem nisi delectus. Facere explicabo hic minus accusamus alias fuga nihil dolorum quae. Explicabo illo unde, odio consequatur ipsam possimus veritatis, placeat, ab molestiae velit inventore exercitationem consequuntur blanditiis omnis beatae. Dolor iste excepturi ratione soluta quas culpa voluptatum repudiandae harum non.
                     </p>
+                    <div class="container-showmore">
+                      <a href="entreprise.html" class="entreprise-showmore">En savoir plus sur Miap Informatique</a>
+                     </div>
                 </div>
            </div>
+           
        </section>
 
-       <section class="jobs scroll" id="jobs">
+       <footer>
+        <div class="container-footer">
+          <div class="bloc1-footer">
+            <ul>
+              <li><h2><i class="fas fa-question-circle"></i> À propos de ce site</h2></li>
+              <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi ut voluptatum eveniet doloremque autem excepturi eaque, sit laboriosam voluptatem nisi delectus. Facere explicabo hic minus accusamus alias fuga nihil dolorum quae. Explicabo illo unde, odio consequatur ipsam possimus veritatis, placeat, ab molestiae velit inventore exercitationem consequuntur blanditiis omnis beatae. Dolor iste excepturi ratione soluta quas culpa voluptatum repudiandae harum non. </li>
+            </ul>
+          </div>
+
+          <div class="bloc2-footer">
+            <ul>
+              <li><h2><i class="fas fa-link"></i> Liens</h2></li>
+              <li><i class="fas fa-address-card"></i> A propos de moi</li>
+              <li><i class="fas fa-building"></i> L'entreprise</li>
+              <li><i class="fas fa-briefcase"></i> Situations professionnelles</li>
+              <li><i class="fas fa-rss-square"></i> Veille technologique</li>
+              <li><i class="fas fa-poll"></i> Bilan des deux années</li>
+            </ul>
+          </div>
+
+          <div class="bloc3-footer">
+            <ul>
+              <li><h2><i class="fas fa-phone-alt"></i> Contact</h2></li>
+              <li><i class="fab fa-linkedin"></i> Mon Linkedin</li>
+              <li><i class="fab fa-github-square"></i> Mon GitHub</li>
+              <li><i class="fas fa-envelope"></i> <a href="mailto:erwanclou@gmail.com">erwanclou@gmail.com</a></li>
+              <li><i class="fas fa-phone-alt"></i> <a href="tel:+33620675638">06 20 67 56 38</a></li>
+            </ul>
+          </div>
+          <p class="copyright">Copyright <i class="far fa-copyright"></i> 2022 Tout Droit Réservé par Erwan Cloux.</p>
+        </div>
+       </footer>
+
+       <!-- <section class="jobs scroll" id="jobs">
             <div class="title-content">
                 <h2 class="title">Mes expériences</h2>
                 <p class="secund">My career</p>
@@ -115,13 +156,13 @@
               </div>
               
 
-       </section>
+       </section> -->
 
          
         <div id="typed-strings">
             <p>technicien informatique <i class="fas fa-server"></i></p>
-            <p>développeur web <i class="fas fa-terminal"></i></p>
             <p>passionné de jeux-vidéos <i class="fas fa-gamepad"></i></p>
+            <p>apprenti en informatique <i class="fas fa-briefcase"></i></p>
         </div>
         
         <script src="script.js" async defer></script>
