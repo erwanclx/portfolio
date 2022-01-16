@@ -138,3 +138,19 @@ p {
     color: transparent;
     -webkit-text-stroke: 1.5px #87839c;
 }
+
+.exit {
+    position: absolute;
+    left: 95%;
+    font-size: 5em;
+    font-family: var(--title);
+    font-weight: bold;
+    color: white;
+    transition: color 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.exit:hover {
+    color: transparent;
+    -webkit-text-stroke: 1.5px #87839c;
+}
