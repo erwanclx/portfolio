@@ -13,6 +13,10 @@
     scroll-snap-type: y mandatory;
 }
 
+a {
+    text-decoration: none;
+}
+
 .situations-home {
     position: absolute;
     left: 50%;
@@ -125,24 +129,29 @@ h2 {
     justify-content: center;
     align-content: center;
     flex-direction: column;
-
     transition: height 300ms ease;
 }
 
 .bloc:hover {
     height: 100%;
     padding-top: 20px;
-    flex-direction: initial;
     transition: all 300ms ease;
-}
-
-.bloc:hover > h3{
-    width: 100%;
-    justify-content: space-between;
+    justify-content: flex-start;
 }
 
 .bloc > p {
     display: none;
+    align-items: flex-end;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    text-indent: 5%;
+    font-family: var(--content);
+    color: #2d3436;
+}
+
+.bloc:hover > p {
+    display: block;
 }
 
 .bloc > h3 {
@@ -153,10 +162,59 @@ h2 {
     display: flex;
     justify-content: space-between;
     padding: 20px;
-
     background: -webkit-linear-gradient(145deg, rgba(103,7,215,1) 0%, rgba(195,7,215,1) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+.button-container {
+    display: none;
+}
+
+.bloc:hover > .button-container {
+    margin-top: 7%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.teletravail-button {
+    border-radius: 20px;
+    padding: 10px;
+    transition: ease-in-out 0.2s;
+    font-size: 1em;
+    font-family: var(--title);
+    color: white; 
+    background: linear-gradient(135deg, rgba(103,7,215,1) 0%, rgba(195,7,215,1) 100%);
+}
+
+.teletravail-button:hover {
+    transform: scale(1.04);
+    background: linear-gradient(135deg, rgb(146, 91, 209) 0%, rgb(188, 81, 200) 100%);
+}
+
+.teletravail-button:active {
+    transform: scale(1);
+}
+
+.pdf-button {
+    background: linear-gradient(135deg, rgba(103,7,215,1) 0%, rgba(195,7,215,1) 100%);
+    padding: 10px;
+    border-radius: 20px;
+    color: white;
+    font-family: var(--title);
+    transition: ease-in-out 0.2s;
+    font-size: 1em;
+}
+
+.pdf-button:hover {
+    transform: scale(1.04);
+    background: linear-gradient(135deg, rgb(146, 91, 209) 0%, rgb(188, 81, 200) 100%);
+}
+
+.pdf-button:active {
+    transform: scale(1);
 }
 
 .exit {
@@ -174,3 +232,4 @@ h2 {
     color: transparent;
     -webkit-text-stroke: 1.5px #87839c;
 }
+

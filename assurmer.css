@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxygen&family=Ubuntu&display=swap');
+
+:root {
+    --title: 'Ubuntu', sans-serif;
+    --content: 'Oxygen', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+}
+
+.gotop {
+    font-size: 5vh;
+    position: sticky;
+    left: 90%;
+    top: 80%;
+}
+
+h2, h3 {
+    font-family: var(--title);
+}
+body {
+    font-family: var(--content);
+}
+
+p {
+    text-indent: 1vw;
+}
+
+.content {
+    width: 90%;
+    margin: auto;
+    text-align: justify;
+}
+
+.sommaire {
+    border: 2px solid black;
+    width: 30%;
+    margin: auto;
+    margin-top: 1%;
+    display: flex;
+    justify-content: center;
+}
+
+.sommaire > ul{
+    list-style: none;
+}
+
+.soustitre {
+    text-indent: 10px;
+}
+
+table {
+    border: solid 2px black;
+    border-collapse: collapse;
+    width: 70%;
+}
+
+th, td {
+    border: 1px solid black;
+}
+
+.products-container {
+    border: 1px solid black;
+    margin-bottom: 1%;
+}
+
+.content > ul > li {
+    list-style-type: counter;
+    line-height: 2;
+}
+
+.exit {
+    position: absolute;
+    left: 95%;
+    font-size: 5em;
+    font-family: var(--title);
+    font-weight: bold;
+    color: black;
+    transition: color 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.exit:hover {
+    color: transparent;
+    -webkit-text-stroke: 1.5px #87839c;
+}
