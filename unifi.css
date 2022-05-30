@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxygen&family=Ubuntu&display=swap');
+
+:root {
+    --title: 'Ubuntu', sans-serif;
+    --content: 'Oxygen', sans-serif;
+}
+
+body {    
+    margin: 0;
+    border: 0;
+    font-family: var(--content);  
+    background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
+}
+
+h1, h2, h2, h4 {
+    font-family: var(--title);  
+}
+
+.container {
+    border-radius: 50px;
+    width: 90%;
+    height: 90%;
+    background-color: white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+}
+
+.wrapper {
+    display: block;
+    padding-top: 5%;
+    padding-left: 2.5%;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 3%;
+    justify-content: center;
+
+}
+
+.bloc {
+    display: flex;
+    flex-direction: column;
+    max-width: 795px;
+}
+
+.bloc > p::first-letter {
+    font-size: 2em;
+    color: #552277;
+    margin-left: 30px;
+}
+
+.left {
+    grid-area: 1/1;
+    width: 100%;
+}
+
+.right {
+    grid-area: 1/2;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.paragraphe {
+    line-height: 1.5;
+}
+
+h4 {
+    margin: 0;
+    padding: 0;
+}
+
+.right > img {
+    margin-bottom: 10px;
+}
+
+.back {
+    color: black;
+    margin-left: 10px;
+}
+@media all and (orientation: portrait) {
+    p, ul, h4, a {
+        font-size: 1.7em;
+    }
+    .container {
+        height: auto;
+    }
+    a {
+        padding-bottom: 20px;
+    }
+
+}

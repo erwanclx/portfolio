@@ -1,0 +1,286 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxygen&family=Ubuntu&display=swap');
+
+*{
+    scroll-snap-type: y mandatory;
+}
+
+body {
+    margin: 0;
+    border: 0;
+    background-color: #FFFFFF;
+    font-family: var(--content); 
+}
+
+:root {
+    --title: 'Ubuntu', sans-serif;
+    --content: 'Oxygen', sans-serif;
+}
+
+.nav-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar{
+    margin-top: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    align-items: center;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    width: 95%;
+    font-family: var(--title);
+}
+
+.backgroundlogo {
+    background-color: #261431;
+    border-radius: 20px;
+    transition: all 0.3s 0s ease;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-TOP: 5px;
+    padding-bottom: 5px;
+}
+
+.backgroundlogo:hover {
+    background-color: #552277;
+}
+.logo {
+    font-size: 45px;
+}
+
+.colorlogo{
+    color: #552277;
+}
+
+.colorlogoscroll{
+    color: white;
+}
+
+.menu {
+    list-style: none;
+    font-size: 18px;
+}
+
+.menu li {
+    display: inline;
+}
+
+.transition {
+    transition: all 0.2s 0s ease;
+}
+
+.colorlogoscroll{
+    color: white;
+}
+
+.backgroundli {
+    background-color: #261431;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-TOP: 5px;
+    padding-bottom: 5px;
+    transform: scale(1.1);
+}
+
+.backgroundli:hover {
+    background-color: #552277;
+}
+
+.menu-btn {
+    transition: ease-in-out 0.3s;
+}
+
+.menu-btn:hover {
+    font-size: 18.5px;
+    padding-bottom: 2px;
+    border-bottom: solid 1.5px #552277;
+}
+
+a {
+    text-decoration:none;
+    color: white;
+    cursor: pointer;
+}
+
+/* Content */
+
+.top-container {
+    width: 100%;
+    height: 60%;
+    background-image: url("top-veille.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-shadow: inset 0px -3px 16px 10px rgba(0,0,0,0.72);
+}
+
+.top-container > h2 {
+    font-family: var(--title);
+    font-size: 45px;
+    color: white;
+}
+
+.container {
+    width: 85%;
+    margin: auto;
+}
+
+.container > h3 {
+    margin-top: 20px;
+    font-family: var(--title);
+    font-size: 35px;
+}
+
+.container > p > a {
+    color: #552277;
+    font-weight: 700;
+}
+
+.container > p::first-letter {
+    font-size: 2em;
+    color: #552277;
+    margin-left: 30px;
+}
+
+.article {
+    transition: filter 0.3s ease-in-out;
+    width: 100%;
+    height: 20%;
+
+    display: flex;
+    justify-content: center;
+
+    margin-bottom: 30px;
+
+    cursor: pointer;
+
+    position: relative;
+    border-radius: 15px;
+}
+
+.article:nth-of-type(1){
+    background: url(https://i.ytimg.com/vi/RjP3Z-qn_Lg/maxresdefault.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.article:nth-of-type(2){
+    background: url(https://9to5toys.com/wp-content/uploads/sites/5/2021/07/Ubiquiti-Dream-Machine-Pro-SE-2.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.article:hover {
+    filter: grayscale();
+}
+
+.hidden-content {  
+    color: white;
+    font-family: var(--title);
+    font-size: 20px;
+    opacity: 0; 
+    transition: opacity 0.3s;
+
+    line-height: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+
+    text-align: center;
+}
+
+.article:hover .hidden-content {
+    opacity: 1;
+}
+
+.hidden-content > p {
+    font-style: italic;
+}
+
+.article-go {
+    font-size: 2em;
+    transition: all 0.3s ease-in-out;
+    margin: 0;
+    padding: 0;
+    max-width: 40px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.article-go:hover {
+    color: #552277;
+    transform: scale(1.1);
+}
+.date {
+    color: white;
+    font-family: var(--title);
+    position: absolute;
+    left: 2%;
+}
+
+.note {
+    color: white;
+    font-family: var(--title);
+    position: absolute;
+    right: 2%;
+    bottom: 8%;
+}
+
+footer {
+    background-color: #271432;
+    height: 40vh;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+}
+
+.container-footer {
+    margin: auto;
+    display: grid;
+    grid-template-columns: 60% 20% 20%;
+    grid-template-rows: 90% 10%;
+    width: 70%;
+    height: 100%;
+    grid-template-areas: "bloc1-footer bloc2-footer bloc3-footer"
+                         "copyright copyright copyright"
+}
+
+.bloc1-footer {
+    grid-area: 1/1;
+    text-align: justify;
+}
+
+.bloc2-footer {
+    grid-area: 1/2;
+}
+
+.bloc3-footer {
+    grid-area: 1/3;
+}
+
+.bloc1-footer > ul > li, .bloc2-footer > ul > li, .bloc3-footer > ul > li {
+    list-style: none;
+    line-height: 1.8;
+}
+.copyright {
+    grid-area: copyright;
+    margin: auto;
+}
+
+.copyright > a {
+   text-decoration: underline;
+}

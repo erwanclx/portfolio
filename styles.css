@@ -228,6 +228,18 @@ section {
     font-size: 1.2em;
     align-items: center;
     text-align: justify;
+    flex-wrap: wrap;
+}
+
+@media (orientation: portrait) {
+    .presentation {
+        justify-content: center;
+        width: 100%;
+        gap: 10%;
+    }
+    .who {
+        font-size: 3em;
+    }
 }
 
 .who {
@@ -436,3 +448,32 @@ footer {
     grid-area: copyright;
     margin: auto;
 }
+
+.copyright > a {
+    text-decoration: underline;
+    cursor: pointer;
+ }
+
+/* .page-transition {
+    width: 100%;
+    height: 300%;
+    background: purple;
+    position: absolute;
+    z-index: 9999999999;
+    overflow: hidden;
+    animation-name: appear;
+    animation-duration: 0.6s;
+    opacity: 0;
+    visibility:hidden
+}
+
+@keyframes appear {
+    from {
+        opacity: 100%;
+        visibility:visible;
+    }
+    to {
+        opacity: 0%;
+        visibility:hidden;
+    }
+} */
