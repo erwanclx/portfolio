@@ -71,7 +71,6 @@
     appId: "1:33349387720:web:634b5e76a937af498d2cfd"
   };
   
-  // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
   const db = firebase.firestore();
   
@@ -79,7 +78,6 @@
   
   db.collection("Article").get().then((querySnapshot) => {
       querySnapshot.forEach((doc) => {
-          // doc.data() is never undefined for query doc snapshots
           console.log(doc.id);
           console.log(typeof(doc.data()));
   
