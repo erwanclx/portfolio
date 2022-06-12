@@ -77,7 +77,6 @@
               });
       })
 
-      items.reverse()
       createArticle(items);
   });
   
@@ -97,7 +96,10 @@
                       <div class="note"><i class="fas fa-solid fa-star"></i><i class="fas fa-solid fa-star"></i><i class="fas fa-solid fa-star"></i><i class="fas fa-solid fa-star"></i><i class="far fa-regular fa-star"></i></div>
                   </div>
                   `;
+                  console.log(item.id)
                   container.appendChild(article);
+                  document.querySelector('.article:nth-of-type('+ item.id +')').style.backgroundImage = "url('"+ item.img_link +"')"
+                  
                 })
   }
   </script>

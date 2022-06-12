@@ -168,15 +168,7 @@ a {
     border-radius: 15px;
 }
 
-.article:nth-of-type(1){
-    background: url(https://i.ytimg.com/vi/RjP3Z-qn_Lg/maxresdefault.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.article:nth-of-type(2){
-    background: url(https://9to5toys.com/wp-content/uploads/sites/5/2021/07/Ubiquiti-Dream-Machine-Pro-SE-2.jpg);
+.article{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
