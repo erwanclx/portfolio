@@ -258,7 +258,7 @@ p {
     justify-content: space-between;
   }
 
-.card {
+.card, .card-pres {
     width: 10vw;
     min-width: 180px;
     max-width: 200px;
@@ -276,7 +276,7 @@ p {
       bottom: -13%;
   }
 
-  .card > img {
+  .card > img, .card-pres > img {
     width: 10vw;
     min-width: 180px;
     max-width: 200px;

@@ -1,10 +1,14 @@
+<!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="utf-8">
     <title>Veille - Portfolio d'Erwan C.</title>
     <meta name="description" content="">
-    <link rel="stylesheet" href="veille.css">
+    <link rel="stylesheet" href="styles.css">
     <script src="https://kit.fontawesome.com/781d1521c3.js" crossorigin="anonymous"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
+    <!-- FIREBASE FIRESTORE -->
+    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-firestore.js"></script>
 </head>
 <body>
     <div class="nav-container">
@@ -26,37 +30,80 @@
     <div class="container">
         <h3>Mes outils utilisés pour la veille<span class="colorlogo">.</span></h3>
 
-        <p>Afin de réaliser cette veille, j'ai choisi d'utiliser l'application <a href="https://squidapp.co/fr/" target="_blank">Squid</a> qui permet de gérer des flux RSS et des sources de manière personnalisées. Son interface moderne et la possibilité d'ajout de widget sur l'écran d'accueil d'un téléphone m'a poussé à exploiter cet outil. </p>
+        <p>Afin de réaliser cette veille, j'ai choisi d'utiliser l'application <a href="https://squidapp.co/fr/" target="_blank">Squid</a> qui permet de gérer des flux RSS et des sources de manière personnalisées. Son interface moderne et la possibilité d'ajout de widget sur l'écran d'accueil d'un téléphone m'a poussé à exploiter cet outil. De plus, je suis abonné à la newsletter d'Unifi. </p>
 
+
+        <p>Pour gérer cette veille, j'ai développé une application mobile qui permet d'ajouter des articles à distance.</p>
     </div>
 
     
-    <div class="container">
+    <div class="container" id="contain-art">
         <h3>Articles<span class="colorlogo">.</span></h3>
 
-        <div class="article">
-            <p class="date">Le 08 Mai 2022</p>
-            <div class="hidden-content">
-                <h4>Annonce de la Dream Wall</h4>
-                <p>Source : <a href="https://www.notebookcheck.com/" target="_blank">Notebookcheck</a></p>
-                <a href="https://www.notebookcheck.com/Ubiquiti-kuendigt-Unifi-Dream-Wall-als-Rackersatz-fuer-kleine-Netzwerke-an.618229.0.html" target="_blank"><i class="far fa-arrow-alt-circle-right article-go"></i></a>
-            </div>
-            <div class="note"><i class="fas fa-solid fa-star"></i><i class="fas fa-solid fa-star"></i><i class="fas fa-solid fa-star"></i><i class="fas fa-solid fa-star"></i><i class="far fa-regular fa-star"></i></div>
-        </div>
+        
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.3/firebase-app.js";
+  import { getFirestore, collection, getDocs } from "https://www.gstatic.com/firebasejs/9.8.3/firebase-firestore.js";
+  const firebaseConfig = {
+    apiKey: "AIzaSyBTooxcRpUIQ0ZOU19ZtBQvSLYq-QMyn_M",
+    authDomain: "maveille-6181c.firebaseapp.com",
+    projectId: "maveille-6181c",
+    storageBucket: "maveille-6181c.appspot.com",
+    messagingSenderId: "33349387720",
+    appId: "1:33349387720:web:634b5e76a937af498d2cfd"
+  };
+  
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  const db = firebase.firestore();
+  
+  let items = [];
+  
+  db.collection("Article").get().then((querySnapshot) => {
+      querySnapshot.forEach((doc) => {
+          // doc.data() is never undefined for query doc snapshots
+          console.log(doc.id);
+          console.log(typeof(doc.data()));
+  
+          items.push({
+                  id: doc.id,
+                  date: doc.data().date,
+                  artname: doc.data().name,
+                  source: doc.data().source,
+                  text: doc.data().text,
+                  url: doc.data().url,
+                  url_origin: doc.data().url_origin,
+                  img_link: doc.data().img_link
+              });
+      })
 
-        <div class="article">
-            <p class="date">Le 11 Février 2022</p>
-            <div class="hidden-content">
-                <h4>Annonce de la Dream Machine SE</h4>
-                <p>Source : <a href="https://lokan.jp/" target="_blank">Lokan</a></p>
-                <a href="https://lokan.jp/2022/02/11/unifi-dream-machine-se/" target="_blank"><i class="far fa-arrow-alt-circle-right article-go"></i></a>
-            </div>
-            <div class="note"><i class="fas fa-solid fa-star"></i><i class="fas fa-solid fa-star"></i><i class="fas fa-solid fa-star"></i><i class="fas fa-solid fa-star"></i><i class="far fa-regular fa-star"></i></div>
-        </div>
-
+      items.reverse()
+      createArticle(items);
+  });
+  
+  function createArticle(items) {
+    items.forEach((item) => {
+    var container = document.getElementById('contain-art');
+  
+                 const article = document.createElement("div");
+                  article.className = "article";
+                  article.innerHTML = `
+                  <p class="date">Le ${item.date}</p>
+                  <div class="hidden-content">
+                      <h4>${item.artname}</h4>
+                      <p>Source : <a href="${item.url_origin}/" target="_blank">${item.source}</a></p>
+                      <p>${item.text}</p>
+                      <a href="${item.url}" target="_blank"><i class="far fa-arrow-alt-circle-right article-go"></i></a>
+                      <div class="note"><i class="fas fa-solid fa-star"></i><i class="fas fa-solid fa-star"></i><i class="fas fa-solid fa-star"></i><i class="fas fa-solid fa-star"></i><i class="far fa-regular fa-star"></i></div>
+                  </div>
+                  `;
+                  container.appendChild(article);
+                })
+  }
+  </script>
     </div>
 
-    <footer>
+    <footer id="footer">
         <div class="container-footer">
           <div class="bloc1-footer">
             <ul>
