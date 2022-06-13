@@ -1,5 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Oxygen&family=Ubuntu&display=swap');
 
+@font-face {
+    font-family: 'MockFlowFont1';
+    src: url('MockFlowFont1.eot?#iefix') format('embedded-opentype'),  url('MockFlowFont1.woff') format('woff'), url('MockFlowFont1.ttf')  format('truetype'), url('MockFlowFont1.svg#MockFlowFont1') format('svg');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+
+
 :root {
     --title: 'Ubuntu', sans-serif;
     --content: 'Oxygen', sans-serif;
@@ -19,7 +28,6 @@ body {
     color: white;
 }
 
-
 .home {
     background: url(banner.jpg.png) no-repeat center;
     height: 100vh;
@@ -31,6 +39,7 @@ body {
     width: 100%;
     display: flex;
     justify-content: center;
+    height: auto;
 }
 
 .navbar{
@@ -45,30 +54,14 @@ body {
     font-family: var(--title);
 }
 
-
 .arrow {
     width: 1.2vw;
     position: absolute;
-    top: 90%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 120%;
+    left: 49.5%;
+    z-index: 99999999999999999999999;
     animation: bounce 2s infinite;
 }
-
-/* .background {
-    background-color: #351947;
-    width: 96%;
-    border-radius: 20px;
-    transition: all 0.5s 0s ease;
-}
-
-.background div {
-    margin-left: 1%;
-}
-
-.background ul {
-    margin-right: 1%;
-} */
 
 .backgroundlogo {
     background-color: #261431;
@@ -93,7 +86,7 @@ body {
 }
 
 .colorlogo{
-    color: #552277;
+    color: #8b37c3;
 }
 
 .colorlogoscroll{
@@ -151,14 +144,14 @@ a {
 .name-span {
     font-size: 10vh;
     margin-left: -6px;
-    color: #552277;
+    color: #8b37c3;
     font-family: var(--title);
     word-spacing: -10px;
     text-shadow: 0 0 3px #451E5E;
 }
 
 #typed {
-    color: #552277;
+    color: #8b37c3;
 }
 
 i {
@@ -228,7 +221,7 @@ section {
     font-size: 1.2em;
     align-items: center;
     text-align: justify;
-    flex-wrap: wrap;
+    gap: 10%;
 }
 
 @media (orientation: portrait) {
@@ -304,110 +297,6 @@ section {
     }
   }
 
-/* ------ Timeline ------ */ 
-
-/* #timeline {
-    margin-top: -80px;
-    display: flex;
-    background-color: #031625;
-  }
-  #timeline:hover .tl-item {
-    width: 23.3333%;
-  }
-  
-  .tl-item {
-    position: relative;
-    width: 25%;
-    height: 50vh;
-    min-height: 600px;
-    color: #fff;
-    overflow: hidden;
-    transition: width 0.5s ease;
-  }
-  .tl-item:before, .tl-item:after {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-  }
-  .tl-item:after {
-    background: rgba(85, 34, 119, 0.5);
-    opacity: 1;
-    transition: opacity 0.5s ease;
-  }
-  .tl-item:before {
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, black 75%);
-    z-index: 1;
-    opacity: 0;
-    transition: opacity 0.5s ease, transform 0.5s ease;
-  }
-  .tl-item:hover {
-    width: 30% !important;
-  }
-  .tl-item:hover:after {
-    opacity: 0;
-  }
-  .tl-item:hover:before {
-    opacity: 1;
-    transform: translate3d(0, 0, 0) translateY(0);
-    transition: opacity 1s ease, transform 1s ease 0.25s;
-  }
-  .tl-item:hover .tl-content {
-    opacity: 1;
-    transform: translateY(0);
-    transition: all 0.75s ease 0.5s;
-  }
-  .tl-item:hover .tl-bg {
-    filter: grayscale(0);
-  }
-  
-  .tl-content {
-    transform: translate3d(0, 0, 0) translateY(25px);
-    position: relative;
-    z-index: 1;
-    text-align: center;
-    margin: 0 1.618em;
-    top: 55%;
-    opacity: 0;
-  }
-  .tl-content h1 {
-    font-family: "Pathway Gothic One", Helvetica Neue, Helvetica, Arial, sans-serif;
-    text-transform: uppercase;
-    color: #1779cf;
-    font-size: 1.44rem;
-    font-weight: normal;
-  }
-  
-  .tl-year {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%);
-    z-index: 1;
-    border-top: 1px solid #fff;
-    border-bottom: 1px solid #fff;
-  }
-  .tl-year p {
-    font-family: "Pathway Gothic One", Helvetica Neue, Helvetica, Arial, sans-serif;
-    font-size: 1.728rem;
-    line-height: 0;
-  }
-  
-  .tl-bg {
-    transform: translate3d(0, 0, 0);
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background-size: cover;
-    background-position: center center;
-    transition: filter 0.5s ease;
-    filter: grayscale(100%);
-  } */
-
 footer {
     background-color: #271432;
     height: 40vh;
@@ -454,26 +343,206 @@ footer {
     cursor: pointer;
  }
 
-/* .page-transition {
-    width: 100%;
-    height: 300%;
-    background: purple;
-    position: absolute;
-    z-index: 9999999999;
-    overflow: hidden;
-    animation-name: appear;
-    animation-duration: 0.6s;
-    opacity: 0;
-    visibility:hidden
+.secund {
+    margin-top: 20px;
+    color: #351947;
+    font-family: var(--title);
+    font-size: 1.2em;
 }
 
-@keyframes appear {
-    from {
-        opacity: 100%;
-        visibility:visible;
-    }
-    to {
-        opacity: 0%;
-        visibility:hidden;
-    }
-} */
+.secund::before,
+.secund::after {
+  border: 2px solid #000000;
+  display: inline-block;
+  content: "";
+  width: 100px;
+  transform: translate(0, -6px);
+}
+.secund::before {
+    margin-right: 0.7vw;
+}
+
+.secund::after {
+    margin-left: 0.7vw;
+}
+nav a {
+    display: block;
+    position: relative;
+    color: #8d8d8d;
+    text-decoration: none;
+    font-size: 20px;
+    padding: calc(10px + 1vmin)  calc(30px + 1vmin);
+    font-weight: 500;
+    overflow: hidden;
+}
+nav a:nth-child(1) {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+nav a:last-child {
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+nav a.marked {
+    color: #333;
+    background: #e7e6e6;
+}
+nav a.marked::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 4px;
+    height: 100%;
+    border-radius: 2px;
+    top: 0;
+    right: 0;
+    background: #552277;
+}
+
+.vertical-nav {
+    max-width: 300px;
+    display: flex; 
+    padding: 0 30px;
+    position: sticky;
+    top: 25%;
+}
+
+nav {
+    align-self: flex-start;
+    margin-right: calc(30px + 1vmin);
+    border: 1px solid rgba(51,51,51,0.25);
+    border-radius: 8px;
+    background-color: #ffffff;
+}
+
+.card {
+    min-width: 300px;
+    width: 300px;
+    height: 400px;
+
+    overflow: hidden;
+
+    border-radius: 40px;
+
+    display: block;
+}
+
+.overlay {
+    height: 20%;
+    margin-top: 80%;
+    z-index: 1;      
+    border-radius: 40px 0 0 0;    
+    background-color: #552277;      
+    transform: translateY(100%);
+    transition: .2s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    padding: 0 5% 0 5%;
+    opacity: 0.9;
+  }
+
+  .card_arc {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    bottom: 100%;
+    left: 75%;
+    z-index: 1;
+  }
+
+  .card_arc path {
+    fill: #552277;
+    d: path("M 40 80 c 22 0 40 -22 40 -40 v 40 Z");
+    transition: .2s ease-in-out;
+  }   
+
+  .card:hover .overlay {
+    transform: translateY(0);
+    height: 40%;
+    background-color: #6d3096;
+    opacity: 1;
+  }
+
+  .card:hover .card_arc path {
+    fill: #6d3096;
+  }
+
+  .overlay-title {
+    color: white;
+    text-align: end;
+    margin-top: 3%;
+  }
+
+  .btn-scroll{
+	background-color: #fff;
+	color: #999;
+	box-shadow: 0 0 10px #999;
+	padding: 5px 8px;
+	border: 0;
+	border-radius: 50%;
+	margin: 0 5px;
+	z-index: 1;
+	cursor: pointer;
+	transition:  1s all ease-out;
+}
+
+.proj-img {
+    background: url('https://preview.redd.it/g38817mqb1361.png?width=640&crop=smart&auto=webp&s=9d8b4b8a44073c740b0c29a78aefa24cf552bc74');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.proj-cert {
+    background: url('https://www.systancia.com/wp-content/uploads/2020/08/ANSSI.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.lock {
+    background: #000;
+    filter: grayscale();
+    font-family: MockFlowFont1;
+}
+
+.opacity-0-css-class {
+    opacity: 0;
+}
+
+         
+.download {
+    background-image: linear-gradient(to right, #DA22FF 0%, #6d3096  51%, #DA22FF  100%);
+    margin: 10px;
+    padding: 15px 45px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;            
+    border-radius: 10px;
+    display: block;
+    border: none;
+    font-size: 0.7em;
+    font-family: var(--title);
+  }
+
+  .download:hover {
+    background-position: right center; /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+  }
+ 
+  .presentation-card {
+    color: #000000;
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.2em;
+    align-items: center;
+    text-align: justify;
+    gap: 10%;
+    overflow-x: hidden;
+}
